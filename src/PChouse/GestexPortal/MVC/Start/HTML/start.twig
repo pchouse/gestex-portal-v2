@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ERP de gestão de centros de exames de licença de condução">
+    {# The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags #}
+    <title>Gestex</title>
+    <link href="/css/main.css" rel="stylesheet">
+    <script src="/js/index.bundle.js" type='module'></script>
+</head>
+<body id="body">
+<div id="init-loader"
+     style="width: 100%; background-color: red; height: 2px; position: absolute; top:0; left: 0; z-index: 99"></div>
+<nav style="visibility: hidden" class="navbar bg-light fixed-top" id="main-navigation">
+    <div class="container-fluid">
+        <button id="offcanvas-open-button"
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"><i class="bi-list" style="font-size: 2rem;"></i> </span>
+        </button>
+        <div id="main-escola-info" style="color: var(--bs-primary)"></div>
+        <button class="btn btn-primary" role="button" id="logout">Sair</button>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+             aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header bg-success">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                    <img src="/img/logo_apec.png" type="APEC" />
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" id="offcanvasListContainer">
+                    {% include 'menuGeral.twig' %}
+                </ul>
+                <img src="/img/pchouse_helpdesk.png" alt="PChouse" style="margin-top: 99px;"/>
+            </div>
+        </div>
+    </div>
+</nav>
+<div style="visibility: hidden" id="containerMainTab">
+    <ul class="nav nav-tabs" id="mainTab" role="tablist"></ul>
+    <div class="tab-content" id="mainTabContent"></div>
+</div>
+<div style="display: none" id="loaderSpinnerContainer" class="visually-hidden">
+    <div class="text-center">
+        <div class="spinner-border" role="status" style="width: 5rem; height: 5rem;">
+        </div>
+    </div>
+</div>
+<div class="progress">
+    <div id="main-progressbar" class="progress-bar bg-warning" role="progressbar"
+         style="width: 0%; height: 3px; z-index: 9999;position: absolute; top: 0; left: 0;" aria-valuenow="0"
+         aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 999999">
+    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <img src="/img/toast.png" class="rounded me-2" alt="...">
+            <strong class="me-auto">Gestex</strong>
+            <small></small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="liveToastBody">
+            Hello, world! This is a toast message.
+        </div>
+    </div>
+</div>
+</body>
+</html>

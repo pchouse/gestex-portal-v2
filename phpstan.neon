@@ -1,0 +1,14 @@
+parameters:
+	level: 7
+	checkMissingIterableValueType: false
+	checkGenericClassInNonGenericObjectType: false
+	paths:
+		- src
+		- test
+	bootstrapFiles:
+		- test/bootstrap.php
+	ignoreErrors:
+		- '#PHPDoc tag @throws .+Zend_.+_Exception is not subtype of Throwable'
+	excludes_analyse:
+		- test/bootstrap.php
+		- test/Base.php

@@ -1,0 +1,15 @@
+{#
+<script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/a2s-cache-sw.js')
+                .then((reg) => {
+                })
+                .catch((e) => {
+                    console.log(e);
+                });
+    }
+</script>
+#}
+
+<link href="/css/login.css" rel="stylesheet">
+<script src="/js/login.bundle.js" type='module'></script>

@@ -1,0 +1,55 @@
+{
+  "name": "pchouse/gestex-portal-frontend",
+  "description": "Apec portal de parceiros",
+  "autoload": {
+    "classmap": [
+      "src", "Zend"
+    ],
+    "files": [
+      "src/bootstrap.php"
+    ]
+  },
+  "autoload-dev": {
+    "classmap": [
+      "test",
+      "test_instrumentation"
+    ],
+    "files": [
+      "test/bootstrap.php",
+      "test_instrumentation/bootstrap.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Gando's Dalthon",
+      "email": "joao.rebelo@pchouse.pt"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "joaomfrebelo/log4php": "^3.0.0",
+    "joaomfrebelo/date": "2.2.2",
+    "joaomfrebelo/decimal": "^4.0.0",
+    "twig/twig": "^3.2",
+    "phpmailer/phpmailer": "^v6.7.1",
+    "hackzilla/password-generator": "1.6.0",
+    "laminas/laminas-validator": "^2.30",
+    "laminas/laminas-mail": "^2.22",
+    "guzzlehttp/guzzle": "^7.8.0",
+    "lcobucci/jwt": "^5.0.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "10.3.5",
+    "squizlabs/php_codesniffer": "^3.7.1",
+    "phpstan/phpstan": "^1.9.17",
+    "slam/phpstan-laminas-framework": "^v1.4.0",
+    "php-webdriver/webdriver": "^1.14.0",
+    "jetbrains/phpstorm-attributes": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "joaomfrebelo/composer-revision-plugin": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}

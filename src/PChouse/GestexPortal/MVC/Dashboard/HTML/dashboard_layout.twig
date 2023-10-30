@@ -1,0 +1,56 @@
+<div id="dashboardUtil"
+     class="formContainer"
+     style="width: 100%;height: 100%; padding-top: 10px;">
+    <div class="form-inline row row-generic">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"
+             style="height: 100%">
+            {# evolução de faturaçao mensal #}
+            <div class="dashboardbox alert alert-success"
+                 role="alert"
+                 style="height: 39px;padding: 4px 4px 2px 19px !important;"
+                 id="dashboard_invoices_chart_title">
+            </div>
+            <div class="dashboardbox"
+                 style="width: 100%; padding: 5px;">
+                <canvas id="dashboard_invoices_chart"></canvas>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"
+             style="height: 100%">
+            {# exames por categoria #}
+            <div class="dashboardbox alert alert-success"
+                 role="alert"
+                 style="height: 39px;padding: 4px 4px 2px 19px !important;"
+                 id="dashboard_categoria_chart_title">
+                Exames por categoria
+            </div>
+            <div class="dashboardbox" style="width: 100%; padding: 5px;">
+                <canvas id="dashboard_categoria_chart"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="form-inline row row-generic">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="height: 100%">
+            {# resultados práticos #}
+            <div class="dashboardbox alert alert-success"
+                 role="alert"
+                 style="height: 39px;padding: 4px 4px 2px 19px !important;"
+                 id="dashboard_praticos_chart_title">
+            </div>
+            <div class="dashboardbox" style="width: 100%; padding: 5px;">
+                <canvas id="dashboard_praticos_chart"></canvas>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"
+             style="height: 100%">
+            {# resultados teoricos #}
+            <div class="dashboardbox alert alert-success" role="alert"
+                 style="height: 39px;padding: 4px 4px 2px 19px !important;"
+                 id="dashboard_teoricos_chart_title">
+            </div>
+            <div class="dashboardbox" style="width: 100%; padding: 5px;">
+                <canvas id="dashboard_teoricos_chart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>

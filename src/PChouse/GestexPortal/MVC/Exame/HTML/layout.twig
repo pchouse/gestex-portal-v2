@@ -1,0 +1,67 @@
+<form id="examesForm" onsubmit="return false;" autocomplete="off">
+    <div class="row">
+        <div class="alert grid-navegation" role="alert" style="height: 59px; padding: 9px; margin: 0">
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12 mb-2">
+                    <input type="text"
+                           name="fromDay"
+                           id="exames_from-day"
+                           value=""
+                           class="form-control text-center"
+                           data-flow="1:2"
+                           placeholder="Desde ao dia"/>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12 mb-2">
+                    <input type="text"
+                           name="toDay"
+                           id="exames_to-day"
+                           value=""
+                           class="form-control text-center"
+                           data-flow="2:3"
+                           placeholder="Até ao dia "/>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12 mb-2">
+                    <button type="button"
+                            class="btn btn-primary"
+                            id="exames-clear-date">
+                        <i class="bi bi-calendar-x"></i>
+                    </button>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 mb-2">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle"
+                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Imprimir
+                            <i class="bi bi-printer"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li id="exames-print-teoricos"><a class="dropdown-item" href="#">Imprimir teóricos</a></li>
+                            <li id="exames-print-praticos"><a class="dropdown-item" href="#">Imprimit práticos</a></li>
+                            <li id="exames-print-all"><a class="dropdown-item" href="#">Imprimir todos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="exames-error-info"
+         class="alert alert-danger visually-hidden text-center"
+         style="position: fixed; top:50%; left:calc(10% - 0px); width: 80%;z-index: 999;" role="alert">
+        Erro
+    </div>
+    <div id="exames-day-close-info"
+         class="alert alert-primary visually-hidden text-center"
+         style="position: fixed; top:50%; left:calc(10% - 0px); width: 80%;" role="alert">
+        Erro
+    </div>
+</form>
+<div class="row row-generic">
+    <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-generic">
+        <label for="exames-teoricos-table"><span class="text-danger fw-bold">Exames teóricos</span></label>
+        <div id="exames-teoricos-table"></div>
+    </div>
+    <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-generic">
+        <label for="exames-praticos-table"><span class="text-danger fw-bold">Exames práticos</span></label>
+        <div id="exames-praticos-table"></div>
+    </div>
+</div>

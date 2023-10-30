@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "ES6",
+    "target": "ES2017",
+    "lib": ["ES2020", "DOM", "ES2020.Promise"],
+    "declaration": true,
+    "outDir": "./src/public_dist",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "strict": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+  },
+  "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "test-cjs/**/*",
+    "test-es6/**/*",
+    "src/**/*.test.*",
+    "src/**/*.spec.*"
+  ]
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="APEC - Portal de parceiros">
+    {# The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags #}
+    <title>Gestex</title>
+    {% include 'common.twig' %}}
+</head>
+<body>
+<div class="container">
+    <div id="login_container">
+        <div class="logo_container">
+            <img src="/img/logotipo.png"
+                 class="logo_img"
+                 alt="logotipo"/>
+        </div>
+        <div class="form_container">
+            <form class="form needs-validation" id="loginForm" novalidate autocomplete="off" onsubmit="return false;">
+                <input type="hidden" name="action" value="login"/>
+                <input type="hidden" name="controller" value="Login"/>
+                <input type="hidden" name="login_type" value="{{ login_type }}"/>
+                <div class="form_row">
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <span class="input-group-text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-person" viewBox="0 0 16 16">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+                                </svg>
+                        </span>
+                        <input data-flow="1:2"
+                               id="username"
+                               name="username"
+                               type="text"
+                               class="form-control"
+                               placeholder="Alvará"
+                               required
+                               autofocus
+                               value=""/>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <span class="input-group-text">
+                            <i class="bi bi-key"></i>
+                        </span>
+                        <input data-flow="2:document.getElementById('login_submit').click()"
+                               id="password"
+                               name="password"
+                               type="password"
+                               class="form-control"
+                               placeholder="Palavra chave"
+                               required
+                               value=""/>
+                        <span class="input-group-text" id="login-eye">
+                            <i class="bi bi-eye"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="form_row">
+                    <div class="input-group">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                        </div>
+                        <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+                            <button id="login_submit" type="button" class="btn btn-primary form-control">Autenticar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="modal" id="confirmDialog" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Atenção</h5>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+            <div class="modal-footer">
+                <button type="button" id="btn-form-ok" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

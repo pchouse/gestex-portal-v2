@@ -1,0 +1,12 @@
+<configuration xmlns="http://logging.apache.org/log4php/">
+    <appender name="nullAppender" class="LoggerAppenderNull" />
+    <appender name="default" class="LoggerAppenderFile">
+        <layout class="LoggerLayoutSimple" />
+        <param name="file" value="/home/rebelo/Repos/GestexPortalV2/tmp/log.log" />
+        <param name="append" value="true" />
+    </appender>
+    <root>
+        <level value="all"/>
+        <appender_ref ref="default" />
+    </root>
+</configuration>
